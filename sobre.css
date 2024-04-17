@@ -1,0 +1,142 @@
+#nav_contem{
+    padding: 1%;
+    border:  1px;
+}
+.logo1{
+    border-radius: 50%;
+    border: solid;
+    margin-left: 15%;
+}
+#hom, #adt, #sjv, #ajd, #ctt, #sbr{
+    cursor: pointer;
+    color: black;
+    font-size: 24px;
+    border-radius: 7px;
+}
+#hom:hover, #adt:hover, #sjv:hover, #ajd:hover, #ctt:hover, #sbr:hover{
+    color: red;
+    transform: scale(1.1);
+    transition: all  .3s ease-in-out;
+}
+#lgn{
+    padding: 15px;
+    color: black;
+    border-color: red;
+}
+#lgn:hover{
+    background-color: rgb(90, 89, 89);
+    color: aliceblue;
+}
+#uln{
+    margin-left: 10%;
+}
+/*css da página principal de sobre*/
+.main_sobre{
+    margin-bottom: 10%;
+}
+.pri_sobre{
+    display: flex;
+}
+.tit_sobre{
+    border: solid;
+    padding: 5%;
+    background: linear-gradient(to right, #890202, #ff0000);
+    color: aliceblue;
+}
+#tit_txt{
+    color: rgb(133, 3, 3);
+}
+.text_sobre{
+    width: 41%;
+    margin-left: 15%;
+}
+#txt_Sbr{
+    color: #600101;
+}
+.carrosel{
+    width:  40%;
+    height: 430px;
+}
+.faq{
+    color: aliceblue;
+    padding: 5%;
+}
+.footer_contem{
+    background: linear-gradient(to right, #890202, #ff0000);
+    color: aliceblue;
+    
+}
+.txt_como, .hr{
+    margin-left: 5%;
+}
+.hr{
+    background-color: aliceblue;
+}
+.rodape{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.sc_inst, .sc_fac{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+.sc_inst:hover, .sc_fac:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+.but_sc{
+    background-color: #1e0101;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 25px;
+    .a_but{
+        text-decoration: none;
+        color: aliceblue;
+    }
+}
+.txt_como{
+    cursor: pointer;
+}
+.bi bi-caret-right-fill{
+    display: none;
+}
+
+/*768*/
+@media screen and (max-width: 992px){
+    #navbarSupportedContent{
+        display: none;
+    }
+    .pri_sobre{
+        display: block;
+        text-align: center;
+    .text_sobre{
+        width: 80%;
+        margin: auto;
+    }
+    }
+    .txt_como, .hr, .rodape {
+        margin-left: 0;
+    }
+    .rodape{
+        flex-direction: column;
+    .logo1{
+        margin-left: 0%;
+    }
+    }
+    .but_sc{
+        width: 40%;
+        height: auto;
+        font-size: 14px;
+    }
+    .a_but{
+        display: block;
+        margin: 0 auto;
+    }
+@media screen and (max-width: 1190px) {
+        #lgn{
+            margin-left: 0%;
+        }
+    }
+}
