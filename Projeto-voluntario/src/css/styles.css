@@ -1,0 +1,41 @@
+.primary-bgcolor{
+    background-color: #542c90;
+}
+.secondary-bgcolor{
+    background-color:#f19a36;
+}
+
+body{
+    color: #333333;
+}
+/*NAVBAR*/
+
+.navbar .nav-link{
+    color: #252523;
+    font-size: 20px;
+    border-radius: 7px;
+}
+.navbar .nav-link:hover{
+    color: #542c90;
+    transform: scale(1.1);
+    transition: all  .3s ease-in-out;
+}
+
+
+/*seção adotados*/
+
+.sombra-imagens {
+    box-shadow: 10px 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+
+/*FOOTER*/
+
+#social-media i{
+    color: #ffffff;
+    padding-left: 10px;
+    font-size: 18px;
+}
+#social-media i:hover{
+    color: #f19a36;
+}
