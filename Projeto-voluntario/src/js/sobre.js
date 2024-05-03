@@ -1,14 +1,14 @@
 //função do header
-const menuHmburg = document.getElementById('navbarSupportedContent');
-const butn = document.getElementById('butn');
+//const menuHmburg = document.getElementById('navbarSupportedContent');
+//const butn = document.getElementById('butn');
 
-butn.addEventListener("click", function(){
-   if(menuHmburg.style.display === "none"){
-    menuHmburg.style.display =  "block";
-   } else {
-     menuHmburg.style.display = 'none';
-   }
-});
+//butn.addEventListener("click", function(){
+  // if(menuHmburg.style.display === "none"){
+    //menuHmburg.style.display =  "block";
+   //} else {
+    // menuHmburg.style.display = 'none';
+   //}
+//});
 
 
 //função nas setas do footer

@@ -1,4 +1,4 @@
-#nav_contem{
+/*#nav_contem{
     padding: 1%;
     border:  1px;
 }
@@ -29,7 +29,7 @@
 }
 #uln{
     margin-left: 10%;
-}
+}*/
 /*css da página principal de sobre*/
 .main_sobre{
     margin-bottom: 10%;
@@ -39,8 +39,8 @@
 }
 .tit_sobre{
     border: solid;
-    padding: 5%;
-    background: linear-gradient(to right, #890202, #ff0000);
+    padding: 30px;
+    background: linear-gradient(to right, #542c90, #9e61fa);
     color: aliceblue;
 }
 #tit_txt{
@@ -59,10 +59,10 @@
 }
 .faq{
     color: aliceblue;
-    padding: 5%;
+    
 }
 .footer_contem{
-    background: linear-gradient(to right, #890202, #ff0000);
+    background-color: #f19a36;
     color: aliceblue;
     
 }
@@ -104,8 +104,8 @@
 }
 
 
+/*
 
-/*768*/
 @media screen and (max-width: 992px){
     #navbarSupportedContent{
         display: none;
@@ -142,3 +142,4 @@
         }
     }
 }
+*/
