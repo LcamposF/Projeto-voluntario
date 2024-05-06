@@ -9,9 +9,26 @@
     // menuHmburg.style.display = 'none';
    //}
 //});
-
+window.onload = function() {
+    // Carrega o conteúdo do header
+    fetch('src/components/header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header-container').innerHTML = data;
+            // Carrega o conteúdo do footer após carregar o header
+            return fetch('src/components/footer.html');
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-container').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o conteúdo:', error);
+        });
+};
 
 //função nas setas do footer
+
 const seta = document.getElementById('txtcomo01');
 var i_01 = document.getElementById('i_01');
 var txt_ajd = document.getElementById('txt_ajd');

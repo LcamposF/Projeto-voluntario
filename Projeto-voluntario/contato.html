@@ -16,36 +16,7 @@
 </head>
 <body>
 
-   <!--Barra de navegação-->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light bg-opacity-75 " >
-    <div class="container">
-      <a class="navbar-brand" href="#">
-          <img src="src/img/logo_adotajp.png" width="120px" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sobre.html">Sobre</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#adotar">Adotar</a>
-            </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="contato.html">Contato</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-</nav>
-
-<!--FIM DA BARRA DE NAVEGAÇÃO -->
+  <div id="header-container"></div>
 
 <!--FORM-->
 <div class="container-form">
@@ -78,23 +49,26 @@
     </form>
 </div>
 
- <!--Footer-->
- <section class="primary-bgcolor py-4">
-    <div class="container">
-        <div class="row ">
-            <div class="col-12 md-6">
-                <h6 class="text-white text-center">AdotaJP</h6>
-                <p class="text-white text-center">Rua das Ruas, 333. B. de JotaPê, João Pessoa - PB <br> 83 99999-9999</p>
-            </div>
-            <div class="col-12 d-flex justify-content-center mt-1" id="social-media">
-                <a href="https://www.instagram.com/adotajp/" ><i class="bi bi-instagram"></i></a>
-                <a href=""><i class="bi bi-meta"></i></a>
-                
-                <a href=""><i class="bi bi-whatsapp"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
+<div id="footer-container"></div>
+<script>
+  window.onload = function() {
+      // Carrega o conteúdo do header
+      fetch('src/components/header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('header-container').innerHTML = data;
+              // Carrega o conteúdo do footer após carregar o header
+              return fetch('src/components/footer.html');
+          })
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('footer-container').innerHTML = data;
+          })
+          .catch(error => {
+              console.error('Erro ao carregar o conteúdo:', error);
+          });
+  };
+</script>
 </body>
 </html>
 
