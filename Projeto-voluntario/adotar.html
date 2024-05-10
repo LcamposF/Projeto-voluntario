@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--BOOTSTRAP 5 CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <!--BOOTSTRAP ICONS-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--JS BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+     <!--CSS PRÓPRIO-->
+     <link rel="stylesheet" href="src/css/styles.css">
+     <link rel="stylesheet" href="src/css/sobre.css">
+     
+    <title>Adota JP</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <section>
+        <div class="container mt-5">
+            <div class="row" id="animalCardsRow"></div>
+        </div>
+        
+        <script>
+            const animals = [
+                     {
+                         nome: "Max",
+                         imagem: "https://th.bing.com/th/id/OIP.2mA5PuBMwqB9p59W5xqbaAHaEK?rs=1&pid=ImgDetMain",
+                         tipo: "cachorro",
+                         raca: "Vira lata",
+                         idade: 5
+                     },
+                     {
+                         nome: "Bella",
+                         imagem: "https://th.bing.com/th/id/OIP.z-M8emaGkTB4qat33MyrrQHaFj?rs=1&pid=ImgDetMain",
+                         tipo: "cachorro",
+                         raca: "Poodle",
+                         idade: 3
+                     },
+                     {
+                         nome: "Charlie",
+                         imagem: "https://th.bing.com/th/id/OIP.08koL6WINLABYfJRgfw8rwHaE8?rs=1&pid=ImgDetMain",
+                         tipo: "cachorro",
+                         raca: "Golden Retriever",
+                         idade: 2
+                     },
+                     {
+                         nome: "Lucy",
+                         imagem: "https://th.bing.com/th/id/R.13297c89cfd9de9c95b792e6ad3a472c?rik=9YepHxy83p90Fg&riu=http%3a%2f%2fanimalsbreeds.com%2fwp-content%2fuploads%2f2014%2f07%2fBeagle.jpg&ehk=FZ9ni0LO81qRkqWKRmcIDB8txM1XCgoFE9%2bJlBnkaGo%3d&risl=&pid=ImgRaw&r=0",
+                         tipo: "cachorro",
+                         raca: "Beagle",
+                         idade: 4
+                     },
+                     {
+                         nome: "Simba",
+                         imagem: "https://th.bing.com/th/id/OIP.qwP5bB13z_5OxptkOFq0ugHaE7?rs=1&pid=ImgDetMain",
+                         tipo: "gato",
+                         raca: "Siamês",
+                         idade: 3
+                     },
+                     {
+                         nome: "Luna",
+                         imagem: "https://th.bing.com/th/id/R.fff88ead4129e8ccd7e418b7dff94f1e?rik=4ufCoLwLgJ7L%2bA&pid=ImgRaw&r=0",
+                         tipo: "cachorro",
+                         raca: "Husky Siberiano",
+                         idade: 3
+                     },
+                     {
+                         nome: "Buddy",
+                         imagem: "caminho_para_imagem_buddy.jpg",
+                         tipo: "cachorro",
+                         raca: "Dachshund",
+                         idade: 7
+                     },
+                     {
+                         nome: "Whiskers",
+                         imagem: "caminho_para_imagem_whiskers.jpg",
+                         tipo: "gato",
+                         raca: "Maine Coon",
+                         idade: 4
+                     },
+                     {
+                         nome: "Rocky",
+                         imagem: "caminho_para_imagem_rocky.jpg",
+                         tipo: "cachorro",
+                         raca: "Boxer",
+                         idade: 4
+                     }
+                     ];
+        
+            const animalCardsRow = document.getElementById("animalCardsRow");
+        
+            animals.forEach(animal => {
+                const card = document.createElement("div");
+                card.classList.add("col-md-4");
+                card.innerHTML = `
+                    <div class="card">
+                        <img src="${animal.imagem}" class="card-img-top" alt="${animal.nome}" />
+                        <div class="card-body">
+                            <h5 class="card-title">${animal.nome}</h5>
+                            <p class="card-text">Idade: ${animal.idade} anos</p>
+                            <p class="card-text">Raça: ${animal.raca}</p>
+                        </div>
+                    </div>
+                `;
+                animalCardsRow.appendChild(card);
+            });
+        </script>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+        window.onload = function() {
+            // Carrega o conteúdo do header
+            fetch('src/components/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    // Carrega o conteúdo do footer após carregar o header
+                    return fetch('src/components/footer.html');
+                })
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar o conteúdo:', error);
+                });
+        };
+      </script>
+</body>
+</html>
