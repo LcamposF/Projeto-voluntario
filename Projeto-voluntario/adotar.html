@@ -18,8 +18,8 @@
 <body>
     <div id="header-container"></div>
     <section>
-        <div class="container mt-5">
-            <div class="row" id="animalCardsRow"></div>
+        <div class="container mt-5 mb-5">
+            <div class="row gx-3 gy-3" id="animalCardsRow"></div>
         </div>
         
         <script>
@@ -68,21 +68,21 @@
                      },
                      {
                          nome: "Buddy",
-                         imagem: "caminho_para_imagem_buddy.jpg",
+                         imagem: "https://www.dachshundjoy.com/wp-content/uploads/2018/04/Daug-Pug-Dachshund-Mix-OPT.jpg",
                          tipo: "cachorro",
                          raca: "Dachshund",
                          idade: 7
                      },
                      {
                          nome: "Whiskers",
-                         imagem: "caminho_para_imagem_whiskers.jpg",
+                         imagem: "https://www.zooplus.co.uk/magazine/wp-content/uploads/2019/03/maine-coon-cat-breed-768x658.jpg",
                          tipo: "gato",
                          raca: "Maine Coon",
                          idade: 4
                      },
                      {
                          nome: "Rocky",
-                         imagem: "caminho_para_imagem_rocky.jpg",
+                         imagem: "https://cdn.greenfieldpuppies.com/wp-content/uploads/2016/07/Boxer-Mix-puppy-1-600x600.jpg",
                          tipo: "cachorro",
                          raca: "Boxer",
                          idade: 4
@@ -95,12 +95,13 @@
                 const card = document.createElement("div");
                 card.classList.add("col-md-4");
                 card.innerHTML = `
-                    <div class="card">
-                        <img src="${animal.imagem}" class="card-img-top" alt="${animal.nome}" />
+                    <div class="card ">
+                        <img src="${animal.imagem}" class="card-img-top img-fluid" alt="${animal.nome}" />
                         <div class="card-body">
                             <h5 class="card-title">${animal.nome}</h5>
                             <p class="card-text">Idade: ${animal.idade} anos</p>
                             <p class="card-text">Raça: ${animal.raca}</p>
+                            <a href="https://www.google.com/search?q=adote+um+animal&oq=adote+um+animal&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDUxOTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" class="btn btn-warning" >Adotar!</a>
                         </div>
                     </div>
                 `;
